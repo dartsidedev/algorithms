@@ -3,7 +3,18 @@ language: dart
 dart:
   - stable
 
-dart_task:
-- dartfmt: -n --set-exit-if-changed .
-- dartanalyzer: --fatal-warnings --fatal-infos .
-- test: .
+stages:
+  - lint
+  - test
+
+jobs:
+  include:
+    - stage: lint
+      script: dartfmt -n --set-exit-if-changed .
+      name: dartfmt
+    - stage: lint
+      script: dartanalyzer --fatal-warnings --fatal-infos .
+      name: dartanalyzer
+    - stage: test
+      script: pub run test .
+      name: test
