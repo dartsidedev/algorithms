@@ -1,0 +1,8 @@
+name: algorithms
+description: Test-Driven Dart Algorithms. Coding interview questions, algorithms, problems solved using Dart.
+author: vince.varga@serial.dev
+repository: https://github.com/dartsidedev/algorithms
+environment:
+  sdk: ">=2.3.0 <3.0.0"
+dev_dependencies:
+  test: ^1.9.1
