@@ -18,12 +18,28 @@ This project uses [`dartfmt`](https://dart.dev/tools/dartfmt) to idiomatically f
 
 Run `dartfmt -w .` before committing to make sure every Dart file is properly formatted.
 
+```
+## Format and fix issues.
+$ dartfmt -w .
+
+## Command running in CI.
+$ dartfmt -n --set-exit-if-changed .
+## See return value of dartfmt. If equals to 1, the build will fail.
+$ echo $?
+```
+
 ### Static analysis and linter
 
 We use [`dartanalyzer`](https://dart.dev/tools/dartanalyzer) to run static analysis and a linter on this project.
 
 ```
+## Run analyzer and see any issues.
 $ dartanalyzer .
+
+## Command running in CI.
+$ dartanalyzer --fatal-infos --fatal-warnings .
+## See return value of dartanalyzer. If equals to 1, the build will fail.
+$ echo $?
 ```
 
 This project's [`analysis_options.yaml`](./analysis_options.yaml) file is taken from the [`flutter/flutter`](https://github.com/flutter/flutter/blob/master/analysis_options.yaml) project.
