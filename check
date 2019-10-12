@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -o errexit
+
+dartfmt -n --set-exit-if-changed .
+
+dartanalyzer --fatal-warnings --fatal-infos .
+
+pub run test .
+
+echo "SUCCESS!"

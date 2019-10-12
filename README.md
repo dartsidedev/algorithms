@@ -53,3 +53,9 @@ Run all tests in the project by executing `pub run test .` command.
 We use Travis CI to check our code on every push.
 
 [![Travis CI Build Status](https://travis-ci.com/dartsidedev/algorithms.svg?branch=master)](https://travis-ci.com/dartsidedev/algorithms)
+
+### Run all commands locally
+
+```
+bash check
+```
